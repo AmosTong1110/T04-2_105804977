@@ -209,3 +209,9 @@ h1, h2, h3 {
 .televisions-page .conclusion {
   margin-top: 1.5rem; /* Separates the conclusion from the final chart. */
 }
+
+.responsive-svg-container {
+margin: 0 auto; /* center */
+width: 100%; /* fill parent width */
+max-width: 1200px; /* cap max width */
+}
