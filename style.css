@@ -215,3 +215,9 @@ margin: 0 auto; /* center */
 width: 100%; /* fill parent width */
 max-width: 1200px; /* cap max width */
 }
+
+.responsive-svg-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
