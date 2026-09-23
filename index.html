@@ -33,21 +33,15 @@
         <!-- Link to the project information page. -->
         <a class="nav-link" href="about_us.html">About Us</a>
       </nav>
-      </header>
-      <h1>Appliance Energy Consumption</h1>
-      <div id="content"></div>
-      <!-- Give the SVG a size so shapes can be seen -->
-      <svg width="300" height="150"></svg>
-      <!-- Load D3 first, then your D3 code file -->
-      <script src="https://d3js.org/d3.v7.min.js"></script>
-      <script src="energy-d3.js"></script> 
     </header>
-    
-     <!-- …your existing content… -->
-      <!-- NEW: Container for T04-3 chart -->
-      <div class="responsive-svg-container"></div>
-      <!-- NEW: T04-4 loader -->
-      <script src="t04-4-load.js"></script>
+
+    <h1>Appliance Energy Consumption</h1>
+    <div id="content"></div>
+    <!-- Give the SVG a size so shapes can be seen -->
+    <svg width="300" height="150"></svg>
+
+    <!-- NEW: Container for the D3 bar chart (T04-3 onward) -->
+    <div class="responsive-svg-container"></div>
 
     <main class="page-shell">
       <section>
@@ -74,13 +68,28 @@
         </div>
       </section>
     </main>
-    
+
     <!-- Footer displayed at the bottom of the page. -->
     <footer class="site-footer">
       <p>&copy; 2026 TONG CHUNG ZHE | Power Australia</p>
       <p>Created with the assistance of GenAI (used to help generate code and content).</p>
     </footer>
-    <!-- Load the shared JavaScript navigation after the page content. -->
+
+    <!-- Load the shared JavaScript navigation. -->
     <script src="script.js"></script>
+
+    <!-- D3 library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Old demo scripts (disabled while doing T04-4/5/6/7) -->
+    <!-- <script src="energy-d3.js"></script> -->
+    <!-- <script src="t04-3-bars.js"></script> -->
+
+    <!-- T04-4: loads CSV, converts types, then calls createBarChart -->
+    <script src="t04-4-load.js"></script>
+
+    <!-- T04-5: defines createBarChart (binds data to rects) -->
+    <script src="t04-5-bars.js"></script>
+
   </body>
 </html>
