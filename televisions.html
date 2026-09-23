@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- The root HTML element sets the document language to English. -->
+<html lang="en">
+
+  <head>
+    <!-- Character encoding that supports standard text symbols. -->
+    <meta charset="utf-8" />
+    <!-- Make the layout fit the width of phones and tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Text shown in the browser tab. -->
+    <title>Televisions | Power AU</title>
+    <meta name="description" content="Explore television energy data, screen size trends, technology comparisons, and energy-saving tips for choosing an efficient TV in Australia." />
+    <!-- Load the shared stylesheet. -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="televisions-page">
+    <!-- Site header containing the logo and main navigation. -->
+    <header class="site-header">
+      <!-- Link the logo back to the home page. -->
+      <a class="brand" href="index.html" aria-label="Power home page">
+        <!-- Display the site logo. -->
+        <img src="Picture/power_logo.png" alt="Power logo" />
+        <!-- Visible brand name beside the logo. -->
+        <span class="brand-name">POWER AUSTRALIA</span>
+      </a>
+      <!-- Navigation links shared by all three pages. -->
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="televisions.html" aria-current="page">Televisions</a>
+        <a class="nav-link" href="about_us.html">About Us</a>
+      </nav>
+    </header>
+
+    <!-- Main content containing the television comparison and charts. -->
+    <main class="page-shell">
+      <section>
+        <!-- Introductory heading and description. -->
+        <div class="intro">
+          <h1>Television Energy Tips</h1>
+          <p class="lede">Simple ways to understand television energy use before choosing a new screen.</p>
+        </div>
+        <div class="tips-box">
+          <p><strong>Size and technology matter.</strong> Larger screens generally use more energy, while modern LED/LCD and OLED televisions can be more efficient than older technologies.</p>
+          <ul>
+            <li>Use Energy Saver or Eco mode and reduce brightness when comfortable.</li>
+            <li>Disable always-listening voice features if you do not use them.</li>
+            <li>Compare star ratings and annual kWh on the energy label before purchasing.</li>
+          </ul>
+        </div>
+
+        <h2>TV Energy Insights: Data Story</h2>
+        <p class="note">This section explores the Australian Government's Television Energy Rating dataset. The patterns below help Australian consumers compare technology, screen size, brand availability, and energy efficiency before choosing a TV.</p>
+        <!-- Summarise the main pattern shown by the charts. -->
+        <div class="highlight">
+          <strong>Screen size and technology both shape a television's energy profile.</strong>
+          <span>The dataset is led by LCD LED models and popular mid-sized screens, while the scatter plots show that larger televisions generally require more power.</span>
+        </div>
+        <!-- Display the project charts in a responsive grid. -->
+        <div class="chart-grid">
+          <figure class="chart-card"><h3>Chart 1: What TV technologies are most common?</h3><img src="Picture/PieChart1.png" alt="Pie chart showing LCD LED as the largest TV screen technology category" /><p class="chart-description">LCD(LED) models make up most listings, while OLED is less common.</p></figure>
+          <figure class="chart-card"><h3>Chart 1: Technology counts</h3><img src="Picture/BarChart1.png" alt="Bar chart showing LCD LED has the highest occurrence count" /><p class="chart-description">The bar chart shows LCD(LED) is leading position in the dataset.</p></figure>
+          <figure class="chart-card"><h3>Chart 2: What screen sizes are most frequent?</h3><img src="Picture/BarChart2.png" alt="Bar chart comparing television screen sizes" /><p class="chart-description">55-inch and 65-inch TVs are most common.</p></figure>
+          <figure class="chart-card"><h3>Chart 3: Which brands dominate the market?</h3><img src="Picture/BarChart3.png" alt="Bar chart comparing number of television models by brand" /><p class="chart-description">Kogan, LG, and Samsung Electronics have the largest number of listed models.</p></figure>
+          <figure class="chart-card"><h3>Chart 4: Which screen type uses the least power?</h3><img src="Picture/BarChart4.png" alt="Bar chart comparing median power by screen technology" /><p class="chart-description">LCD TVs use the least power in this comparison, while OLED uses slightly more.</p></figure>
+          <figure class="chart-card"><h3>Chart 5: How does screen size relate to power use?</h3><img src="Picture/Scatter_plot_a.png" alt="Scatter plot showing the relationship between television screen size and power use" /><p class="chart-description">The relationship is clearly positive: larger TVs generally use more power.</p></figure>
+          <figure class="chart-card"><h3>Chart 6: How do star rating and screen size relate?</h3><img src="Picture/Scatter_plot_b.png" alt="Scatter plot showing the relationship between television star rating and screen size" /><p class="chart-description">Star ratings are spread across sizes, showing that bigger TVs can still be efficient when well designed.</p></figure>
+        </div>
+        <section class="conclusion">
+          <h2>Conclusion</h2>
+          <p>When choosing a TV, balance screen size, technology, brand, and efficiency. A 55-inch LED TV is common and can be an energy-smart choice for many households.</p>
+        </section>
+      </section>
+    </main>
+    
+    <!-- Footer displayed at the bottom of the page. -->
+    <footer class="site-footer">
+      <p>&copy; 2026 TONG CHUNG ZHE | Power Australia</p>
+      <p>Created with the assistance of GenAI (used to help generate code and content).</p>
+    </footer>
+    <!-- Load the shared JavaScript navigation after the page content. -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+
+:root {
+  
+  --brown: #5b3826; /* Stores the site's main dark colour. */
+  /* Light background colour used throughout the site. */
+  --cream: #fdf3d1; /* Stores the site's light background colour. */
+  /* Accent colour used for highlights and hover states. */
+  --orange: #f2a530; /* Stores the site's accent colour. */
+  /* Reusable white colour for cards and text. */
+  --white: #ffffff; /* Stores the reusable white colour. */
+  /* Default text colour. */
+  --text: #333333; /* Stores the default text colour. */
+}
+
+
+* { box-sizing: border-box; /* Includes padding and borders in element dimensions. */ 
+}
+
+
+body {
+  margin: 0; /* Removes the browser's default page margin. */
+  
+  font-family: Arial, sans-serif; /* Sets the site's default typeface. */
+ 
+  line-height: 1.6; /* Adds readable vertical spacing between text lines. */
+  
+  color: var(--text); /* Applies the default text colour. */
+
+  background: var(--cream); /* Applies the shared page background. */
+  
+  /* Make the page fill the viewport height so the footer can sit at the bottom. */
+  min-height: 100vh; /* 100% of the viewport height */
+  display: flex; /* Stacks the page sections vertically. */
+  flex-direction: column; /* Places header, main, and footer in a column. */
+}
+
+
+a { color: inherit; 
+  text-decoration: none; /* Removes underlines and inherits link colour. */ 
+}
+
+
+h1, h2, h3 { 
+  margin: 0 0 0.5rem; /* Adds consistent heading spacing. */ 
+  color: var(--brown); /* Applies the heading colour. */ 
+}
+
+/* Arrange the logo and navigation across the top of the page. */
+.site-header {
+  display: flex; /* Places header items in a flexible row. */
+  align-items: center; /* Vertically aligns header items. */
+  justify-content: space-between; /* Separates branding and navigation. */
+  flex-wrap: wrap; /* Allows header items to wrap on narrow screens. */
+  gap: 1rem; /* Adds space between wrapped header items. */
+  padding: 1rem 1.5rem; /* Adds space inside the header. */
+  background: var(--brown); /* Applies the shared header colour. */
+}
+
+.brand { display: flex; /* Places logo and name in one row. */ 
+  align-items: center; /* Vertically aligns logo and name. */ 
+  gap: 0.75rem; /* Adds space between logo and name. */ 
+}
+
+.brand img { 
+  width: 48px; /* Sets the logo width. */ 
+  height: 48px; /* Sets the logo height. */ 
+}
+
+.brand-name { 
+  color: var(--white); /* Makes the brand name readable on the header. */ 
+  font-weight: bold; /* Emphasises the brand name. */ 
+  font-size: 1.1rem; /* Sets the brand name size. */ 
+}
+
+.site-nav { 
+  display: flex; /* Places navigation links in a row. */ 
+  gap: 0.5rem; /* Adds space between navigation links. */ 
+}
+
+.nav-link { 
+  padding: 0.5rem 1rem; /* Creates a comfortable link target. */ 
+  color: var(--cream); /* Applies the navigation text colour. */ 
+  font-weight: bold; /* Emphasises navigation labels. */ 
+  border-radius: 4px; /* Softens link corners. */ 
+}
+
+.nav-link:hover { 
+  background: var(--orange); 
+  color: var(--brown); 
+}
+
+.nav-link[aria-current="page"] { 
+  background: var(--cream); 
+  color: var(--brown); 
+}
+
+.page-shell {
+  flex: 1; /* Allows the main content area to fill the remaining vertical space. */
+  max-width: 1000px; /* Limits line length on wide screens. */ 
+  margin: 0 auto; /* Centers the main content. */ 
+  padding: 2rem 1.5rem; /* Adds space around the main content. */ 
+  width: 100%; /* Makes the main section use the available width. */
+}
+
+/* Add space below the introductory text. */
+.intro { margin-bottom: 2rem; /* Separates the introduction from following content. */ }
+
+/* Style supporting introductory text. */
+.lede { color: var(--brown); /* Styles introductory supporting text. */ }
+
+/* Style explanatory notes in italic text. */
+.note { color: var(--brown); /* Applies the note text colour. */ 
+  font-style: italic; /* Distinguishes explanatory notes. */ 
+}
+
+.card-grid { display: grid; /* Creates a card layout. */ 
+  grid-template-columns: repeat(3, 1fr); /* Shows three cards per row. */ 
+  gap: 1rem; /* Adds space between cards. */ 
+  margin-bottom: 1.5rem; /* Separates card groups. */ 
+}
+
+.card { padding: 1rem; /* Adds space inside each card. */ 
+  background: var(--white); /* Gives cards a readable surface. */ 
+  border: 2px solid var(--brown); /* Defines each card edge. */ 
+  border-radius: 6px; /* Softens card corners. */ 
+}
+
+/* Style highlighted information blocks. */
+.highlight { padding: 1rem; /* Adds space inside the highlight. */ margin-bottom: 1.5rem; /* Separates the highlight from charts. */ background: var(--white); /* Gives the highlight a clear surface. */ border-left: 6px solid var(--orange); /* Draws attention to the highlight. */ border-radius: 6px; /* Softens the highlight corners. */ }
+/* Put the second line of a highlight on its own line. */
+.highlight span { display: block; /* Places supporting highlight text on its own line. */ margin-top: 0.5rem; /* Separates supporting text from the summary. */ color: var(--brown); /* Applies the supporting text colour. */ }
+
+/* Keep each chart and its description together without a separate frame. */
+.chart-card { margin: 0; /* Removes the browser's default figure margin. */ }
+/* Keep chart images visible at their natural proportions. */
+.chart-card img { display: block; /* Removes inline-image whitespace. */ width: 100%; /* Uses the available chart width. */ object-fit: contain; /* Preserves the image proportions. */ background: var(--white); /* Gives transparent image areas a white surface. */ }
+
+/* Style the footer at the bottom of every page. */
+.site-footer { padding: 1rem 1.5rem; /* Adds space inside the footer. */ 
+  background: var(--brown); /* Applies the footer background. */ 
+  color: var(--cream); /* Applies readable footer text. */ 
+  text-align: center; /* Centers footer content. */ 
+  font-size: 0.85rem; /* Keeps footer text compact. */ 
+}
+/* Keep footer paragraphs close together. */
+.site-footer p { margin: 0.25rem 0; /* Keeps footer paragraphs close together. */ }
+
+/* Adjust the layout for screens narrower than 700 pixels. */
+@media (max-width: 700px) {
+  /* Stack cards and charts into one column on small screens. */
+  .card-grid, .chart-grid { grid-template-columns: 1fr; /* Stacks grid items on narrow screens. */ }
+  /* Keep charts readable without making the mobile page excessively tall. */
+  /* Stack the header content vertically on small screens. */
+  .site-header { flex-direction: column; /* Stacks header groups on narrow screens. */ 
+    align-items: flex-start; /* Aligns stacked header groups to the left. */ 
+  }
+}
+
+.televisions-page {
+  background: var(--white); /* Gives the television page the sample's white background. */
+}
+
+.televisions-page .page-shell {
+  max-width: 960px; /* Matches the sample's readable content width. */
+}
+
+.televisions-page .tips-box {
+  margin: 0 0 1.5rem; /* Separates the tips box from the data story. */
+  padding: 1rem 1.25rem; /* Adds space inside the tips box. */
+  background: #fffdf5; /* Gives the tips box a subtle warm surface. */
+  border: 1px solid #e2e2e2; /* Defines the tips box edge. */
+  border-radius: 10px; /* Softens the tips box corners. */
+}
+
+.televisions-page .tips-box p,
+.televisions-page .tips-box ul {
+  margin-top: 0; /* Aligns tips content with the box's top padding. */
+}
+
+.televisions-page .tips-box ul {
+  margin-bottom: 0; /* Removes unnecessary space below the final tip. */
+}
+
+.televisions-page .chart-grid {
+  display: grid; /* Creates the single-column chart sequence. */
+  grid-template-columns: 1fr; /* Gives each chart the full content width. */
+  gap: 1.5rem; /* Separates consecutive charts. */
+  padding: 0; /* Removes shared-box padding from the old layout. */
+  background: transparent; /* Leaves charts on the page background. */
+  border: 0; /* Removes the old shared chart frame. */
+}
+
+.televisions-page .chart-card h3 {
+  margin: 0 0 0.5rem; /* Separates each chart question from its image. */
+  font-size: 1.1rem; /* Keeps chart headings prominent but compact. */
+}
+
+.televisions-page .chart-card img {
+  height: auto; /* Preserves each chart's natural aspect ratio. */
+  max-height: 620px; /* Prevents very tall images from dominating the page. */
+  object-fit: contain; /* Keeps the complete chart visible. */
+}
+
+.televisions-page .chart-description {
+  margin: 0.5rem 0 0; /* Separates the interpretation from the image. */
+  font-size: 1rem; /* Keeps chart explanations easy to read. */
+}
+
+.televisions-page .conclusion {
+  margin-top: 1.5rem; /* Separates the conclusion from the final chart. */
+}
